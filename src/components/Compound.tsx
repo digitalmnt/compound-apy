@@ -10,13 +10,10 @@ import React, { FC, useEffect, useState } from 'react'
 import DatePicker from 'react-date-picker'
 import { MdGraphicEq } from 'react-icons/md'
 import { getBlockFromTimestamp } from '../services/compound'
+import { BlockProps } from '../types'
 import { Chart } from './Chart'
 
-interface BlockProps {
-  interval: Number | null,
-  startDate: Date,
-  endDate: Date,
-}
+
 
 async function findBlocks({ interval, startDate, endDate }: BlockProps) {
   const start = dayjs(startDate)

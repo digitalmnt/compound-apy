@@ -2,6 +2,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import gql from 'graphql-tag'
+import { BlockData, ChartData, Point } from '../types'
 
 const axios = require('axios').default
 
@@ -13,20 +14,6 @@ const instance = axios.create({
   baseURL: HOST,
   timeout: TIMEOUT,
 })
-
-interface Point {
-  x: Date,
-  y: number
-}
-interface ChartData {
-  id: string,
-  data: Point[],
-}
-
-interface BlockData {
-  timeStamp: any,
-  block: number[]
-}
 
 function resolveAccountData(returns: any, blocks: BlockData[]) {
   const allCharts: any = {}

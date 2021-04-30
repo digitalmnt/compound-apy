@@ -3,6 +3,7 @@ import { ResponsiveLine } from '@nivo/line'
 import React, { useContext, useEffect, useState } from 'react'
 import { AccountContext } from '../context/account'
 import { getAccountAPY } from '../services/compound'
+import { Account, BlockData, ChartComponentProps } from '../types'
 
 const LineChart = ( data: any ) => (
   <ResponsiveLine
@@ -89,20 +90,6 @@ const LineChart = ( data: any ) => (
       ]}
   />
 )
-
-interface BlockData {
-  timeStamp: any,
-  block: number[]
-}
-interface ChartComponentProps {
-  blocks: BlockData[]
-  isBlocksLoading: boolean
-}
-interface Account {
-  account: string,
-  updateAccount: (Account: string) => void;
-}
-
 
 
 export const Chart = (props: ChartComponentProps) => {

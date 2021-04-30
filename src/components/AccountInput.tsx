@@ -1,12 +1,7 @@
 import { Container, Input, Text } from "@chakra-ui/react"
 import React, { useContext } from 'react'
 import { AccountContext } from '../context/account'
-interface Account {
-  account: string,
-  updateAccount: (Account: string) => void;
-}
-
-
+import { Account } from '../types'
 
 export const AccountInput = () => {
   const { updateAccount, account } = useContext<Account>(AccountContext)

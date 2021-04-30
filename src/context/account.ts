@@ -1,9 +1,5 @@
 import { createContext } from 'react'
-
-export interface Account {
-  account: string,
-  updateAccount: (Account: string) => void;
-}
+import { Account } from '../types'
 
 export const AccountContext = createContext<Account>({
   account: '',
