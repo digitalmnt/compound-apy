@@ -1,4 +1,4 @@
-## Simple hostorical APY for compound deposits and Withdrawls
+## Simple historical APY for compound deposits and Withdrawls
 
 In the project directory, you can run:
 
